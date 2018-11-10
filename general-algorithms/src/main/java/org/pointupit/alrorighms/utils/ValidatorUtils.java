@@ -10,6 +10,13 @@ public final class ValidatorUtils {
         }
     }
 
+    @SafeVarargs
+    public static <T> void requireNotNull(T... objects) {
+        if (objects == null) {
+            throw new IllegalArgumentException("Array is null");
+        }
+    }
+
     public static <T> void requireNonNull(T object, String message) {
         if (object == null) {
             throw new IllegalArgumentException(message);

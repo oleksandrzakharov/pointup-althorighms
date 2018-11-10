@@ -28,4 +28,11 @@ public abstract class AbstractBinaryTree<T> extends AbstractTree<T> implements B
 
         return TreeUtils.countNonNullElements(left(parent), right(parent));
     }
+
+    @Override
+    public Iterable<Position<T>> children(Position<T> parent) {
+        ValidatorUtils.requireNonNull(parent);
+
+        return TreeUtils.concatNonNullElements(left(parent), right(parent));
+    }
 }

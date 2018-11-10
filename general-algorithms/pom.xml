@@ -11,5 +11,13 @@
 
     <artifactId>general-algorithms</artifactId>
     <description>There is a sandbox for general algorithms</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

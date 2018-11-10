@@ -8,7 +8,7 @@ public final class TreeUtils {
 
     @SafeVarargs
     public static <T> long countNonNullElements(T... elements) {
-        ValidatorUtils.requireNotNull(elements);
+        ValidatorUtils.requireNonNull(elements);
 
         long counter = 0;
         for (T element : elements) {
@@ -21,7 +21,7 @@ public final class TreeUtils {
 
     @SafeVarargs
     public static <T> List<T> concatNonNullElements(T... elements) {
-        ValidatorUtils.requireNotNull(elements);
+        ValidatorUtils.requireNonNull(elements);
 
         final List<T> snapshot = new ArrayList<>(elements.length);
         for (T element : elements) {
